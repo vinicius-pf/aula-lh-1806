@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'my_new_project'
+name: 'aula_lh_1806'
 version: '1.0.0'
 config-version: 2
 
@@ -36,9 +36,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  aula-lh-1806:
+  aula_lh_1806:
     01_staging:
-      +materialized: ephemeral
+      jaffle_shop:
+        +materialized: ephemeral
     
     02_intermediate:
       +materialized: table

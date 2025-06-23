@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: int_orders
+    description: Tabela de pedidos da jaffle shop
+    columns:
+      - name: order_id
+        description: Chave primária da tabela, identifica uma compra única
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: ""
+
+      - name: store_id
+        description: ""
+
+      - name: order_ts
+        description: ""
+
+      - name: subtotal
+        description: ""
+
+      - name: tax_paid
+        description: ""
+
+      - name: order_total
+        description: ""
