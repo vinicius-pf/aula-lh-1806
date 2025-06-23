@@ -1,3 +1,10 @@
+{{
+    config(
+        materialized = 'incremental'
+        , unique_key = 'order_id'
+    )
+}}
+
 with
 
     base_data as (
@@ -10,6 +17,9 @@ with
             , tax_paid
             , order_total
         from {{ ref('int_orders') }}
+        {% if is_incremental() %}
+            where order_ts > ( select max(order_ts) from {{ this }} )
+        {% endif %}
     )
 
 select * from base_data

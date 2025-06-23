@@ -9,3 +9,6 @@ sources:
     tables:
       - name: raw_orders
         description: Tabela contendo dados de pedidos da jaffle shop
+
+      - name: raw_items
+        description: Tabela contendo dados de pedidos da jaffle shop
